@@ -1,6 +1,6 @@
 <head>
 <meta charset="utf-8">
-<title>Bellaria - a Delicious Cakes and Bakery HTML Template | Home Cake</title>
+<title>Bellaria - um modelo HTML delicioso para bolos e padaria | Página inicial Bolo</title>
  
 <!-- Stylesheets -->
 <link href="{{ asset('davilla/css/bootstrap.css') }}" rel="stylesheet">

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    protected $table = 'tbl_categorias';
+    protected $table = 'tbl_categoria';
     protected $primaryKey = 'id_categoria';
     public $timestamps = true;
 

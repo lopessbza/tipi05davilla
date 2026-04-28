@@ -8,7 +8,7 @@ use App\Http\Controllers\PedidosController;
 use App\Http\Controllers\RegiaoController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/home', [HomeController::class, 'home'])->name( 'home');
+Route::get('/', [HomeController::class, 'home'])->name( 'home');
 Route::get('/sobre', [SobreController::class, 'sobre'])->name( 'sobre');
 Route::get('/cardapio', [CardapioController::class, 'cardapio'])->name( 'cardapio.index');
 /** Submenu de Cardapio */

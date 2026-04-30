@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Produto;
 
 class Categoria extends Model
 {
@@ -14,6 +15,13 @@ class Categoria extends Model
     const UPDATE_AT = 'atualizado_em_categoria';
 
     protected $fillable = [
-        
+        'nome_categoria',
+        'descricao_categoria',
+        'status_categoria',
+        'ordem_categoria'
     ];
+
+    public function ProdutosCategoria(){
+        return $this->hasMany(Produto::class, 'id_categoria', 'id_categoria');
+    }
 }

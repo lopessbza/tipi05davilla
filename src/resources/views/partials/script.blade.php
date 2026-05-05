@@ -14,6 +14,7 @@
 <script src="{{ asset('davilla/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
 <script src="{{ asset('davilla/plugins/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
 <script src="{{ asset('davilla/js/main-slider-script.js') }}"></script>
+
 <!--Revolution Slider-->
 <script src="{{ asset('davilla/js/jquery.fancybox.js') }}"></script>
 <script src="{{ asset('davilla/js/owl.js') }}"></script>

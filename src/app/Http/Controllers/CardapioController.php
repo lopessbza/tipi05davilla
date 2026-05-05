@@ -14,11 +14,23 @@ class CardapioController extends Controller
         //buscar categoria para montar a lista de filtro
         $filtroCategoria = Categoria::where('status_categoria', 'ATIVA') ->orderby('ordem_categoria') -> get();
 
+        //dd($filtroCategoria);
+
         //Buscar todos produtos ativos com a categoria
         $listaProduto = Produto::with('CategoriaProduto') ->where('status_produto', 'ATIVO') ->orderby('ordem_produto') -> get();
 
+        //dd($listaProduto);
 
-        return view('site.cardapio.cardapio', compact ('filtroCategoria','listaProduto'));
+        return view('site.cardapio.index', compact ('filtroCategoria','listaProduto'));
 
+    }
+
+
+    public function showProduto($id){
+
+        $produto = Produto::with('CategoriaProduto')->where('status_produto', 'ATIVO')->where('id_produto', $id)->firstOrFail();
+        //dd($produto);
+
+        return view('site.cardapio.produto', compact ('produto'));
     }
 }

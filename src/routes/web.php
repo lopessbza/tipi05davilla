@@ -12,12 +12,15 @@ Route::get('/', [HomeController::class, 'home'])->name( 'home');
 Route::get('/sobre', [SobreController::class, 'sobre'])->name( 'sobre');
 Route::get('/cardapio', [CardapioController::class, 'cardapio'])->name( 'cardapio.index');
 /** Submenu de Cardapio */
-Route::get('/cardapio/categoria/id', [CardapioController::class, 'show'])->name('cardapio.categoria');
+Route::get('/cardapio/categoria/{id}', [CardapioController::class, 'show'])->name('cardapio.categoria');
+
+/** Submenu de produto */
+Route::get('/Cardapio/Produto/{id}', [CardapioController::class, 'showProduto'])->name('cardapio.produto');
 
 
 Route::get('/contato', [ContatoController::class, 'contato'])->name( 'contato');
 Route::get('/pedidos', [PedidosController::class, 'pedidos'])->name( 'pedidos');
 Route::get('/regiao', [RegiaoController::class, 'regiao'])->name( 'regiao.index');
 /** Submenu de Região */
-Route::get('/regiao/area/id', [RegiaoController::class, 'show'])->name('regiao.area');
+Route::get('/regiao/area/{id}', [RegiaoController::class, 'show'])->name('regiao.area');
 

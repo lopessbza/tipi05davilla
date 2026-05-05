@@ -5,17 +5,20 @@
 </head>
 <body>
     <div class="page-wrapper">
-        @include('partials.preloader')
+        {{-- Preloader removido para parar de travar a tela --}}
+        
         @include('partials.header')
- 
+
         <main>
             @yield('content')
         </main>
- 
+
         @include('partials.footer')
     </div>
- 
+
     @include('partials.script')
+    
     @include('partials.scroll')
+
 </body>
 </html>

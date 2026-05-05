@@ -8,6 +8,6 @@ class PedidosController extends Controller
 {
     public function pedidos()
     {
-        return view('site.pedidos.pedidos');
+        return view('site.pedidos.index');
     }
 }

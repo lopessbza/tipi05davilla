@@ -26,11 +26,19 @@ class CardapioController extends Controller
     }
 
 
-    public function showProduto($id){
+    public function showProduto($slug){
 
-        $produto = Produto::with('CategoriaProduto')->where('status_produto', 'ATIVO')->where('id_produto', $id)->firstOrFail();
+        $produto = Produto::with('CategoriaProduto')->where('status_produto', 'ATIVO')->where('slug_produto', $slug)->firstOrFail();
         //dd($produto);
+        
+        return view('site.produto.produto', compact ('produto'));
 
-        return view('site.cardapio.produto', compact ('produto'));
+
+        $listaProduto = Produto::with('CategoriaProduto')->where('status_produto', 'ATIVO')->orderBy('ordem_produto')->get();
+        
     }
-}
+
+  
+ 
+
+    }

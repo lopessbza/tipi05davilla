@@ -15,7 +15,7 @@ Route::get('/cardapio', [CardapioController::class, 'cardapio'])->name( 'cardapi
 Route::get('/cardapio/categoria/{id}', [CardapioController::class, 'show'])->name('cardapio.categoria');
 
 /** Submenu de produto */
-Route::get('/Cardapio/Produto/{id}', [CardapioController::class, 'showProduto'])->name('cardapio.produto');
+Route::get('/Cardapio/Produto/{slug}', [CardapioController::class, 'showProduto'])->name('cardapio.produto');
 
 
 Route::get('/contato', [ContatoController::class, 'contato'])->name( 'contato');

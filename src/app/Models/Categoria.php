@@ -8,7 +8,7 @@ use App\Models\Produto;
 class Categoria extends Model
 {
     protected $table = 'tbl_categoria';
-    protected $primaryKey = 'id_categoria';
+    protected $primaryKey = 'id_categoria'; 
     public $timestamps = true;
 
     const CREATED_AT = 'criado_em_categoria';

@@ -1,5 +1,5 @@
 @php
-    $pageTitle = asset('davilla/images/34.jpg');
+    $pageTitle = asset('davilla/images/contato/banner-contato.jpg');
 @endphp
  
 <section class="page-title" style="background-image:url('{{ $pageTitle }}')">

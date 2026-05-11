@@ -1,3 +1,7 @@
+    @php
+    $recipes = asset('src/public/davilla/images/logo.png');
+    @endphp
+    
     <section class="call-to-action" >
         <div class="shape_wrapper shape_one">
             <div class="shape_inner shape_two" style= "background-image: url/images/main-image/bannerpng"><div class="overlay"></div></div>

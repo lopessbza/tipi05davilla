@@ -20,4 +20,5 @@
 <script src="{{ asset('davilla/js/owl.js') }}"></script>
 <script src="{{ asset('davilla/js/wow.js') }}"></script>
 <script src="{{ asset('davilla/js/appear.js') }}"></script>
+<script src="{{ asset('davilla/js/mixitup.js') }}"></script>
 <script src="{{ asset('davilla/js/script.js') }}"></script>

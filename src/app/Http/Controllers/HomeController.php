@@ -2,19 +2,24 @@
 
 namespace App\Http\Controllers;
 
+
 use illuminate\http\Request;
 use App\Models\Categoria;
 use App\Models\Produto;
 
 class HomeController extends Controller
 {
-    public function home()
-    {
-        //buscar categoria para montar a lista de filtro
-        $filtroCategoria = Categoria::where('status_categoria', 'ATIVO') ->orderby('ordem_categoria') -> get();
+   public function home()
+{
+    // 1. Procura as categorias (já estava a fazer)
+    $filtroCategoria = Categoria::where('status_categoria', 'ATIVO')
+        ->orderBy('ordem_categoria')
+        ->get();
 
-        // dd($filtroCategoria);
+    // 2. ADICIONE ESTA LINHA: Procura os produtos para o seu portfólio
+    $listaProduto = Produto::all(); // Ou use Produto::where('status', 'ATIVO')->get();
 
-        return view('site.home.index', compact('filtroCategoria'));
-    }
+    // 3. ADICIONE 'listaProduto' ao compact
+    return view('site.home.index', compact('filtroCategoria', 'listaProduto'));
+}
 }

@@ -24,3 +24,5 @@ Route::get('/regiao', [RegiaoController::class, 'regiao'])->name( 'regiao.index'
 /** Submenu de Região */
 Route::get('/regiao/area/{id}', [RegiaoController::class, 'show'])->name('regiao.area'); 
 
+Route::get('/home/produto/{slug}', [HomeController::class, 'linkProduto'])->name('banner');
+

@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
-
+namespace App\Http\Controllers\Site;
+use App\Http\Controllers\Controller;
 use illuminate\http\Request;
 
 class SobreController extends Controller

@@ -1,5 +1,5 @@
    @php
-   $services = asset('davilla/images/services/services-1.svg');
+   $services = asset('davilla/images/services/services-1.svg');                  
    @endphp
 
    <section class="services-section" style="background-image: url('{{ $services }}');">
